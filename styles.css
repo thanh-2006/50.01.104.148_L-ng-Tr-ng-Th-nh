@@ -1,27 +1,92 @@
+/* Định dạng cơ bản */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f9fa;
+  color: #212529;
 }
 
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212529;
+    color: #f8f9fa;
+  }
+
+  header {
+    background: url('img/ip16.jpg') no-repeat center center/cover;
+  }
+
+  .navbar-dark {
+    background-color: #343a40;
+  }
+
+  .footer-dark {
+    background-color: #343a40;
+  }
+}
+
+/* Hero Section */
 header {
-  background: url('img/ip16.jpg') no-repeat center center/cover;  /* Thêm ip16.jpg làm hình nền */
+  background: url('img/ip16.jpg') no-repeat center center/cover;
   height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Tối ưu kiểu chữ cho các phần tiêu đề */
+h1.display-4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Card hover effect */
 .card {
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+.card-body {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+}
+
+/* Button hover effect */
+.btn-primary {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Footer */
 footer {
   background-color: #343a40;
   color: white;
+  font-size: 1rem;
+  border-top: 1px solid #444;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lazy Loading */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Shadow for navbar and footer */
+.navbar, footer {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
